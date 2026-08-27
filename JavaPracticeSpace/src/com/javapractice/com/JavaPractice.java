@@ -19,7 +19,7 @@ public class JavaPractice {
             }
         }
 
-        System.out.println("Second Largest: " + second);
+        System.out.println("Second Largest in ever : " + second);
     }
 	
 
