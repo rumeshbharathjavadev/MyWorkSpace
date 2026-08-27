@@ -21,5 +21,6 @@ public class JavaPractice {
 
         System.out.println("Second Largest: " + second);
     }
+	
 
 }
