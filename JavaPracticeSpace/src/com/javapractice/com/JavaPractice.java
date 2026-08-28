@@ -1,26 +1,27 @@
 package com.javapractice.com;
 
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 public class JavaPractice {
 
 	public static void main(String[] args) {
 
-		int arr[] = {10, 15, 20, 8, 20, 15, 45};
+		int[] arr = { 10, 20, 30, 20, 40, 50, 10, 30 };
 
-        int first = Integer.MIN_VALUE;
-        int second = Integer.MIN_VALUE;
+		Set<Integer> hs = new LinkedHashSet<>();
 
-        for (int i = 0; i < arr.length; i++) {
+		for (int i = 0; i < arr.length; i++) {
 
-            if (arr[i] > first) {
-                second = first;
-                first = arr[i];
-            } else if (arr[i] > second && arr[i] != first) {
-                second = arr[i];
-            }
-        }
+			if(!hs.add(arr[i])){
+				hs.add(arr[i]);
+			}
+		}
+		
+		for (int a:hs) {
+			System.out.println(a);
+		}
 
-        System.out.println("Second Largest in ever : " + second);
-    }
-	
+	}
 
 }
